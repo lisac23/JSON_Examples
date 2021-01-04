@@ -12,14 +12,14 @@ print(data['pageInfo']['totalResults'])
 
 for item in data['items']:
     print(item)
-    print(item['kind'])
-    print(item['etag'])
-    print(item['id']['kind'])
+    print('kind: ' +item['kind'])
+    print('etag: ' +item['etag'])
+    print('id kind: ' + item['id']['kind'])
     if 'videoId' in item['id']:
-        print(item['id']['videoId'])
+        print('videoID: ' + item['id']['videoId'])
     else:
         print('no video id')
     if 'channelId' in item['id']:
-        print(item['id']['channelId'])
+        print('channelID: ' + item['id']['channelId'])
     else:
         print('no channel id')
